@@ -1,0 +1,2 @@
+function load_error_page(e){var o=window.location.protocol+"//"+window.location.host;e=o+e;var t=$.ajax({type:"GET",url:e,dataType:"html",statusCode:{404:function(){$("#error-message").html("<h1> Page Not Found </h1>")}}});t.done(function(e){$("#error-message").html(e)});t.fail(function(e,o){$("#error-message").html("<h1> Page Not Found </h1>")})}window.addEventListener("DOMContentLoaded",()=>{load_error_page(document.getElementById("error-message").dataset.error_page_path)});
+//# sourceMappingURL=error.min.js.map
